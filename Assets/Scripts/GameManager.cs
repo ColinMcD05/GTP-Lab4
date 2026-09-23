@@ -5,9 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    public GameObject playerPrefab;
-    public GameObject meteorPrefab;
-    public GameObject bigMeteorPrefab;
+    [SerializeField] PlayerSpawner playerSpawner;
+    [SerializeField] GameObject meteorPrefab;
+    [SerializeField] GameObject bigMeteorPrefab;
     public bool gameOver = false;
 
     public int meteorCount = 0;
@@ -15,7 +15,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Instantiate(playerPrefab, transform.position, Quaternion.identity);
+        playerSpawner.SpawnPlayer();
         InvokeRepeating("SpawnMeteor", 1f, 2f);
     }
 
