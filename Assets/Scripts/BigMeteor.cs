@@ -5,6 +5,7 @@ using UnityEngine;
 public class BigMeteor : MonoBehaviour
 {
     private int hitCount = 0;
+    public bool bigSpawned = false;
 
     // Start is called before the first frame update
     void Start()
@@ -20,11 +21,13 @@ public class BigMeteor : MonoBehaviour
         if (transform.position.y < -11f)
         {
             Destroy(this.gameObject);
+            bigSpawned = false;
         }
 
         if (hitCount >= 5)
         {
             Destroy(this.gameObject);
+            bigSpawned = false;
         }
     }
 
@@ -34,11 +37,13 @@ public class BigMeteor : MonoBehaviour
         {
             GameObject.Find("GameManager").GetComponent<GameManager>().gameOver = true;
             Destroy(whatIHit.gameObject);
+            bigSpawned = false;
         }
         else if (whatIHit.tag == "Laser")
         {
             hitCount++;
             Destroy(whatIHit.gameObject);
+            bigSpawned = false;
         }
     }
 }
