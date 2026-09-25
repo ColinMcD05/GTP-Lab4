@@ -26,7 +26,7 @@ public class Meteor : MonoBehaviour
     {
         if (whatIHit.tag == "Player")
         {
-            GameObject.Find("GameManager").GetComponent<GameManager>().gameOver = true;
+            GameObject.Find("GameManager").GetComponent<GameManager>().SetGameOver(true);
             Destroy(whatIHit.gameObject);
             Destroy(this.gameObject);
         } else if (whatIHit.tag == "Laser")

@@ -4,8 +4,8 @@ using UnityEngine.InputSystem;
 public class PlayerController : MonoBehaviour
 {
     //References
-    [SerializeField]PlayerMovement playerMovement;
-    [SerializeField]PlayerFire playerFire;
+    [SerializeField] PlayerMovement playerMovement;
+    [SerializeField] PlayerFire playerFire;
 
     //Input action variables
     private InputSystem_Actions mapping;
