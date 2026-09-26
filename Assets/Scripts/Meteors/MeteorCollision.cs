@@ -2,15 +2,21 @@ using UnityEngine;
 
 public class MeteorCollision : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    private MeteorDestroy meteor;
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter2D(Collider2D whatIHit)
     {
-        
+        if (whatIHit.tag == "Player")
+        {
+            GameObject.Find("GameManager").GetComponent<GameManager>().SetGameOver(true);
+            Destroy(whatIHit.gameObject);
+            Destroy(this.gameObject);
+        }
+        else if (whatIHit.tag == "Laser")
+        {
+            GameObject.Find("GameManager").GetComponent<GameManager>().meteorCount++;
+            Destroy(whatIHit.gameObject);
+            Destroy(this.gameObject);
+        }
     }
 }

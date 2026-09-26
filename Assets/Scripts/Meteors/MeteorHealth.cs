@@ -2,15 +2,16 @@ using UnityEngine;
 
 public class MeteorHealth : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    [SerializeField] int health;
+    private MeteorDestroy meteorDestroy;
+
+    public void LoseHealth(int amountLost)
     {
-        
+        health -= amountLost;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Death()
     {
-        
+        meteorDestroy.DestroyMeteor();
     }
 }
