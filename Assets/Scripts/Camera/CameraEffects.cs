@@ -10,10 +10,29 @@ public class CameraEffects : MonoBehaviour
     [SerializeField] float normalSize = 5f;
     [SerializeField] float bigMeteorSize = 7f;
     [SerializeField] float zoomDuration = 0.5f;
+    public void BigMeteorSpawned()
+    {
+        StartCoroutine(ZoomCamera(bigMeteorSize));
+    }
 
-    // Update is called once per frame
-    void Update()
+    public void BigMeteorDestroyed()
+    {
+        StartCoroutine(BigMeteorDeathEffect());
+    }
+
+    private IEnumerator BigMeteorDeathEffect()
+    {
+
+
+        yield return new WaitForSeconds(0.3f);
+
+        
+        yield return StartCoroutine(ZoomCamera(normalSize));
+    }
+
+    private IEnumerator ZoomCamera(float targetSize)
     {
         
+        yield return null;
     }
 }
