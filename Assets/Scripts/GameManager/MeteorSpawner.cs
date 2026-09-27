@@ -11,7 +11,7 @@ public class MeteorSpawner : MonoBehaviour
     
     public void StartSpawnSmallMeteor()
     {
-        InvokeRepeating("SpawnMeteor", startWaitTime, repeatTime);
+        InvokeRepeating("SpawnSmallMeteor", startWaitTime, repeatTime);
     }
 
     public void StopSpawnSmallMeteor()

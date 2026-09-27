@@ -19,7 +19,7 @@ public class MeteorDestroy : MonoBehaviour
         {
             gameManager.GainScore(amountGained);
         }
-        Destroy(this);
+        Destroy(gameObject);
     }
 
     //Once out of camera, destroy
