@@ -10,6 +10,7 @@ public class CameraEffects : MonoBehaviour
     [SerializeField] float normalSize = 5f;
     [SerializeField] float bigMeteorSize = 7f;
     [SerializeField] float zoomDuration = 0.5f;
+
     public void BigMeteorSpawned()
     {
         StartCoroutine(ZoomCamera(bigMeteorSize));
