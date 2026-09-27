@@ -5,6 +5,11 @@ public class MeteorHealth : MonoBehaviour
     [SerializeField] int health;
     [SerializeField] MeteorDestroy meteorDestroy;
 
+    private void Awake()
+    {
+        meteorDestroy = GetComponent<MeteorDestroy>();
+    }
+
     //Lose health
     public void LoseHealth(int amountLost)
     {

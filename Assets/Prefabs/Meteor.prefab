@@ -208,4 +208,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c253ceba00c150418470d138dac9189, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
+  playerSpawner: {fileID: 0}
+  speed: 30
+  player: {fileID: 0}
+  speedMulti: 0
