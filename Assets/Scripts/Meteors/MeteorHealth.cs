@@ -3,7 +3,7 @@ using UnityEngine;
 public class MeteorHealth : MonoBehaviour
 {
     [SerializeField] int health;
-    private MeteorDestroy meteorDestroy;
+    [SerializeField] MeteorDestroy meteorDestroy;
 
     //Lose health
     public void LoseHealth(int amountLost)

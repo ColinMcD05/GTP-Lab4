@@ -195,6 +195,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 1
+  meteorDestroy: {fileID: 7867717153076067683}
 --- !u!114 &49444367584781184
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -207,4 +208,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c253ceba00c150418470d138dac9189, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0
+  speed: 3

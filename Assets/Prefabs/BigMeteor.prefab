@@ -195,6 +195,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 5
+  meteorDestroy: {fileID: 6999919135607574423}
 --- !u!114 &2636230208974435745
 MonoBehaviour:
   m_ObjectHideFlags: 0

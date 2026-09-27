@@ -15,11 +15,11 @@ public class MeteorDestroy : MonoBehaviour
     //Handles destroying meteor
     public void DestroyMeteor(bool destroyedByPlayer)
     {
-        if(destroyedByPlayer)
+        if(destroyedByPlayer && gameManager)
         {
             gameManager.GainScore(amountGained);
         }
-        Destroy(this);
+        Destroy(this.gameObject);
     }
 
     //Once out of camera, destroy
