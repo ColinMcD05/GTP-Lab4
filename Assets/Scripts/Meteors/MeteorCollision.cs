@@ -19,6 +19,11 @@ public class MeteorCollision : MonoBehaviour
             if (gameManager)
             {
                 gameManager.SetGameOver(true);
+                var meteors = FindObjectsByType<MeteorCollision>(FindObjectsSortMode.None);
+                for(int i = 0; i < meteors.Length; i++)
+                {
+                    Destroy(meteors[i].gameObject);
+                }
                 Destroy(whatIHit.gameObject);
                 if (meteorHealth)
                 {
