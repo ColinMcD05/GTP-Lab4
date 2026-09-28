@@ -38,14 +38,17 @@ public class MeteorDestroy : MonoBehaviour
     }
 
     //Once out of camera, destroy
-    public void OnBecameInvisible()
+    public void Update()
     {
-        DestroyMeteor(false);
-
-        if (isBigMeteor)
+        if (transform.position.y <= -11)
         {
-            Debug.Log("Big Meteor Destroyed");
-            camEffects.BigMeteorDestroyed();
+            DestroyMeteor(false);
+
+            if (isBigMeteor)
+            {
+                Debug.Log("Big Meteor Destroyed");
+                camEffects.BigMeteorDestroyed();
+            }
         }
     }
 }

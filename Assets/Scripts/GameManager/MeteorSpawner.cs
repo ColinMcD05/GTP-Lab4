@@ -17,18 +17,22 @@ public class MeteorSpawner : MonoBehaviour
     {
         InvokeRepeating("SpawnSmallMeteor", startWaitTime, repeatTime);
         player = GameObject.FindFirstObjectByType<PlayerMovement>().transform;
+
+        camEffect = Camera.main.GetComponent<CameraEffects>();
     }
 
+    //Stop Spawning meteors
     public void StopSpawnSmallMeteor()
     {
         CancelInvoke();
     }
 
+    //Spawn meteors
     public void SpawnSmallMeteor()
     {
         if (meteorPrefab)
-
-            Instantiate(meteorPrefab, new Vector3(Random.Range(player.position.x + -8, player.position.x + 8), player.position.y + 7.5f, 0), Quaternion.identity);
+        {
+            Instantiate(meteorPrefab, new Vector3(Random.Range(-3, 3), 3f, 0), Quaternion.identity);
         }
     }
 
@@ -36,7 +40,6 @@ public class MeteorSpawner : MonoBehaviour
     {
         if (bigMeteorPrefab)
         {
-            Instantiate(bigMeteorPrefab, new Vector3(Random.Range(player.position.x + -8, player.position.x + 8), player.position.y + 7.5f, 0), Quaternion.identity);
             Debug.Log("Big Meteor Spawned");
             camEffect.BigMeteorSpawned();
             //Instantiate(bigMeteorPrefab, new Vector3(Random.Range(-8, 8), 7.5f, 0), Quaternion.identity);

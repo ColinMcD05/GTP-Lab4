@@ -21,7 +21,7 @@ public class MeteorHealth : MonoBehaviour
         }
     }
 
-    //Hanldes death
+    //Handles death
     public void Death()
     {
         meteorDestroy.DestroyMeteor(true);

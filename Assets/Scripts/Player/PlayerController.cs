@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour
     
     void Awake()
     {
+        //Sets up mapping
         mapping = new InputSystem_Actions();
         move = mapping.Player.Move;
         fire = mapping.Player.Attack;
@@ -21,6 +22,7 @@ public class PlayerController : MonoBehaviour
 
     void OnEnable()
     {
+        //Enables and sets actions
         move.Enable();
         move.performed += playerMovement.SetMovementVector;
         move.canceled += playerMovement.ResetMovementVector;
@@ -31,6 +33,7 @@ public class PlayerController : MonoBehaviour
 
     void OnDisable()
     {
+        //Disables actions
         move.Disable();
         move.performed -= playerMovement.SetMovementVector;
         move.canceled -= playerMovement.ResetMovementVector;
@@ -41,6 +44,7 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        //Move player
         playerMovement.MovePlayer();
     }
 }

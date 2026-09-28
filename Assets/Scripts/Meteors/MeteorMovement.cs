@@ -14,7 +14,11 @@ public class MeteorMovement : MonoBehaviour
     //Moves meteor down
     void Update()
     {
-        player = playerSpawner.player.transform;
+        //Get player position
+        if (player)
+        {
+            player = playerSpawner.player.transform;
+        }
 
         MoveDownward();
     }

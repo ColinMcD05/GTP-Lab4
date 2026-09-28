@@ -85,6 +85,7 @@ public class GameManager : MonoBehaviour
     public void SetGameOver(bool newGameOver)
     {
         gameOver = newGameOver;
+        //Stop spawning meteors
         if(!gameOver)
         {
             meteorSpawner.StopSpawnSmallMeteor();

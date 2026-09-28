@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class PlayerSpawner : MonoBehaviour
 {
+	//References
 	[SerializeField] GameObject playerPrefab;
 	[SerializeField] CinemachineCamera cinCam;
 	public GameObject player;

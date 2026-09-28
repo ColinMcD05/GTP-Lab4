@@ -10,7 +10,8 @@ public class ResetLevelScript : MonoBehaviour
     {
         this.gameManager = gameManager;
     }
-
+    
+    //Restart level
     public void ResetLevel(InputAction.CallbackContext context)
     {
         if (gameManager.GetGameOver())
